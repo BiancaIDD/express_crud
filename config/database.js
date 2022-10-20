@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize"; 
 
 const db = new Sequelize(
-    "nombre_base_datos", //esta base de dataos ya la tenemos creadas "larnu_demo"
-    "usuario", //"larnu"
-    "contraseña", {
+    "postgres", //esta base de dataos ya la tenemos creadas "larnu_demo"
+    "postgres", //"larnu"
+    "180122", {
     host: "localhost", //si trabajamos en nuestra computadora solamente
     dialect: 'postgres', //dialecto
     logging: false,
