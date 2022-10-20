@@ -6,10 +6,19 @@ import cors from "cors";
 import db from "./config/database.js";
 // Import router
 import Router from "./routes/routes.js";
+// Import dotenv
+import dotenv from 'dotenv';
+
+import path from 'path'
 // Init express
 const app = express(); 
 // use express json
 app.use(express.json());
+//cargar archivo .env para usar variables de entorno
+import {fileURLToPath} from 'url';
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+dotenv.config({ path: path.join(dirname, '.env') });
 
 // var corsOptions = {
 //   origin: 'http://example.com',
